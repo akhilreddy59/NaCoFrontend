@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6c63ff, #5dc4e7);
+    color: #333;
+}
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+.list {
+    flex: 1;
+    margin: 10px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #444;
+}
+.list ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.list li {
+    padding: 10px;
+    margin: 8px 0;
+    background: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.list li:hover {
+    background: #6c63ff;
+    color: #fff;
+}
+.list li.selected {
+    background: #ff9800;
+    color: #fff;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-add { background: #4caf50; color: #fff; }
+.btn-move-right { background: #2196f3; color: #fff; }
+.btn-move-left { background: #ff9800; color: #fff; }
+.btn-remove { background: #f44336; color: #fff; }
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 30px);
+    margin: 10px auto;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s;
+}
+input[type="text"]:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .list {
+        min-width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
